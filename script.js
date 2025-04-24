@@ -12,14 +12,14 @@ function login() {
   if (users[username] && users[username] === password) {
     currentUser = username;
     document.getElementById("login-container").style.display = "none";
-    document.getElementById("main-container").style.display = "block";
+    document.getElementById("main-container").style.display = "flex";
     document.getElementById("welcome-message").innerHTML =
       `<p>Bem-vindo, <strong>${username}</strong>! ${
         username === 'Branquelo' ? 'Gabbz está te esperando! 😎' : ''
       }</p>`;
 
-    // Só Gabbz pode mudar o emoji
-    document.getElementById("felicidade-slider").style.display = 
+    // Mostrar o slider só pro Gabbz
+    document.getElementById("felicidade-slider").style.display =
       username === "Gabbz" ? "block" : "none";
   } else {
     document.getElementById("login-error").innerText = "Usuário ou senha inválidos.";
@@ -42,16 +42,6 @@ function enviarMensagem() {
 function atualizarEmoji() {
   const slider = document.getElementById("felicidade-slider").value;
   const emoji = document.getElementById("emoji");
-
   const estados = ["😢", "🙂", "😄", "🤩"];
   emoji.textContent = estados[slider];
-}
-
-function toggleMusic() {
-  const music = document.getElementById("bg-music");
-  if (music.paused) {
-    music.play();
-  } else {
-    music.pause();
-  }
 }
