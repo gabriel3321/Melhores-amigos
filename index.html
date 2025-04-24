@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amizade Hacker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="login-container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Usuário">
+    <input type="password" id="password" placeholder="Senha">
+    <button onclick="login()">Entrar</button>
+    <p id="login-error"></p>
+  </div>
+
+  <div id="main-container" style="display:none">
+    <h1 class="amizade">💚 Amizade entre Branquelo e Gabbz — Melhores Amigos 💚</h1>
+    <div id="welcome-message"></div>
+
+    <div id="felicidade-container">
+      <p>Como o Gabbz está se sentindo:</p>
+      <div id="emoji">🙂</div>
+      <input type="range" id="felicidade-slider" min="0" max="3" value="1" oninput="atualizarEmoji()">
+    </div>
+
+    <div id="chat-box"></div>
+    <input type="text" id="chat-input" placeholder="Digite uma mensagem...">
+    <button onclick="enviarMensagem()">Enviar</button>
+
+    <div id="audio-controls">
+      <audio id="bg-music" autoplay loop>
+        <source src="https://files.catbox.moe/6u9y0t.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+      </audio>
+      <button onclick="toggleMusic()">Pause/Play Música</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
