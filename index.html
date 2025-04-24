@@ -25,16 +25,10 @@
       <input type="range" id="felicidade-slider" min="0" max="3" value="1" oninput="atualizarEmoji()">
     </div>
 
-    <div id="chat-box"></div>
-    <input type="text" id="chat-input" placeholder="Digite uma mensagem...">
-    <button onclick="enviarMensagem()">Enviar</button>
-
-    <div id="audio-controls">
-      <audio id="bg-music" autoplay loop>
-        <source src="https://files.catbox.moe/6u9y0t.mp3" type="audio/mpeg">
-        Seu navegador não suporta áudio.
-      </audio>
-      <button onclick="toggleMusic()">Pause/Play Música</button>
+    <div id="chat-container">
+      <div id="chat-box"></div>
+      <input type="text" id="chat-input" placeholder="Digite uma mensagem...">
+      <button onclick="enviarMensagem()">Enviar</button>
     </div>
   </div>
 
